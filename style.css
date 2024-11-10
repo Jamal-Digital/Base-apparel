@@ -1,0 +1,133 @@
+ *{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+}
+:root{
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --bj:  hsl(0, 100%, 98%);
+    --hd-color: to hsl(0, 74%, 74%);
+    --white: hsl(0, 0%, 100%);
+    
+}
+section{
+    background: linear-gradient(var(--white),var(--bj));
+    height: auto;
+    padding-bottom: 2rem;
+}
+header{
+    padding: 2rem 10%;
+}
+.image-holder img{
+    width:100%;
+}
+.content-holder{
+    padding: 2.5rem 10%;
+    text-align: center;
+}
+.content-holder span{
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+   font-weight: 300;
+   color: var(--Desaturated-Red)
+}
+.content-holder h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .5rem;
+    line-height: 2.6rem;
+    color: var(--Dark-Grayish-Red);
+    margin-bottom: 1rem;
+}
+.content-holder p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--Desaturated-Red);
+}
+.email input{
+    position: relative;
+    border: 1px solid var(--Dark-Grayish-Red);
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--Desaturated-Red);
+    border-radius: 3rem;
+    background: transparent;
+}
+ .email{
+    padding: 0 10%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.email button{
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    height: 100%;
+    padding: 1rem 1.9rem;
+    border-radius: 2rem;
+    border: none;
+    background: linear-gradient( 135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    cursor: pointer;
+    
+}
+button:hover{
+    background:  hsl(0, 80%, 86%);
+    box-shadow: 5px 5px 10px hsla(0, 6%, 24%, 0.19);
+}
+.column-2 img{
+    display: none;
+}
+.error-msg{
+    color: var(--Soft-Red);
+    margin-top: .5rem;
+}
+
+/* Desktop Responsiveness */
+@media (width >= 819px){
+    .content-holder{
+        margin-top: 0;
+    }
+}
+@media (width >= 50em){
+    .image-holder img{
+        display: none;
+    }
+    .column-2 img{
+        display: block;
+    }
+    section{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .content-holder{
+        margin-top: 1rem;
+        text-align: left;
+    }
+    .content-holder span{
+        font-size: 3rem;
+    }
+    .content-holder h1{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .column-1{
+        padding-left: 10%;
+        padding-right: 10%;
+        flex-basis: 65%;
+        justify-content: left;
+    }
+    .column-2 img{
+        width: 100%;
+        height: auto;
+        object-fit: cover ;
+    }
+}
+
